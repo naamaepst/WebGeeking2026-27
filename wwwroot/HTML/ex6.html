@@ -1,11 +1,10 @@
-﻿<!DOCTYPE html>
+﻿﻿<!--<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <title>Exercise 6</title>
     <script>
-        function fillTable()
-        {
+        function fillTable() {
             var firstName = prompt("Enter your first name:");
             document.getElementById("fName").innerHTML = firstName;
             var lastName = prompt("Enter your last name:");
@@ -34,10 +33,54 @@
             </tr>
 
         </table>
-        </div>
-        <script type="text/javascript">
-            fillTable();
-        </script>
+    </div>
+    <script type="text/javascript">
+        fillTable();
+    </script>
+
+</body>
+</html>-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>My Table</title>
+
+    <script type="text/javascript">
+
+        function createTable(fName, lName, uAge, uAdress) {
+
+            document.write(
+                "<table border='1' align='center' dir='rtl' style='border-collapse: collapse; width: 100%;'>" +
+
+                "<tr>" +
+                "<th>שם פרטי</th>" +
+                "<th>שם משפחה</th>" +
+                "<th>גיל</th>" +
+                "<th>כתובת</th>" +
+                "</tr>" +
+
+                "<tr>" +
+                "<td style='background-color:blue'>" + fName + "</td>" +
+                "<td style='background-color:yellow'>" + lName + "</td>" +
+                "<td style='background-color:green'>" + uAge + "</td>" +
+                "<td style='background-color:red'>" + uAdress + "</td>" +
+                "</tr>" +
+
+                "</table>"
+            );
+        }
+
+        var fName = prompt("Enter your first name:");
+        var lName = prompt("Enter your last name:");
+        var uAge = prompt("Enter your age:");
+        var uAdress = prompt("Enter your address:");
+
+        createTable(fName, lName, uAge, uAdress);
+
+    </script>
+</head>
+<body>
 
 </body>
 </html>
